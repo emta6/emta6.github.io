@@ -1,5 +1,8 @@
 /* || General setup */
 
+/* Elements must meet minimum color contrast ratio thresholds serious · WCAG 2.0 AA Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds. Applicable success criteria: 1.4.3 */
+/* To address this lack of contrast, I changed the h1 heading to black for more contrast*/
+
 html, body {
   margin: 0;
   padding: 0;
