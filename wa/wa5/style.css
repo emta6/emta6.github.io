@@ -252,7 +252,7 @@ audio {
   flex: 5;
 }
 
-.sr-only {
+.hidden-label {
   position: absolute;
   clip: rect(0, 0, 0, 0);
 }
