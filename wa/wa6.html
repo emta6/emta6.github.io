@@ -120,13 +120,16 @@
             border: 2px solid transparent;
         }
 
-        .button:hover, .form:hover {
+        .button:hover {
             /*background-color: color-mix(in srgb, var(--color-primary) 80%, black);*/
             background-color: #241F77;
             border-color: var(--color-secondary);
             transform: scale(1.05);
         }
 
+        .form:hover {
+            border-color: var(--color-secondary);
+        }
         .button:active {
             transform: scale(0.95);
             background-color: var(--color-secondary);
