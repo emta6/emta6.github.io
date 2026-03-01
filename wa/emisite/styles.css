@@ -1,0 +1,226 @@
+
+        :root {
+            /* Color Palette - 5 Core Colors */
+            --color-primary: #2a2289;     /* Vibrant Blue - Main Brand Color */
+            --color-secondary: #5753d2;   /* Emerald Green - Complementary Action Color */
+            --color-accent: #AE0A18;      /* Passionate Red - Highlight / Warning Color */
+            --color-neutral: #1E3048;     /* Deep Slate Gray - Neutral Text and Background */
+            --color-highlight: #FFAF75;   /* Bright Yellow - Accent / Attention Color */
+            
+            /* Derived Colors for Flexibility */
+            --color-background: #FFFAF8;
+            --color-background-container: #f8f3f1;
+            /*--color-background: color-mix(in srgb, var(--color-neutral) 10%, #FFFAF8);*/
+            --color-text-dark: var(--color-neutral);
+            --color-text-light: white;
+
+            /* Typography */
+            --font-primary: 'Switzer', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-secondary: 'Switzer', monospace;
+
+            /* Spacing System */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            background-color: var(--color-background);
+            color: var(--color-neutral);
+            margin: var(--spacing-xl);
+            padding: var(--spacing-xl);
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: var(--spacing-lg);
+            padding: var(--spacing-xl);
+            background-color: var(--color-background-container);
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Typography Styles */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-primary);
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-secondary);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-secondary);
+        }
+
+        p {
+            font-size: 1.1rem;
+            font-weight: 450;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-primary);
+        }
+
+        .title-header {
+            max-width:1800px;
+            background-color: var(--color-background-container);
+            border-radius: var(--radius-md);            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: var(--spacing-md);
+            padding: var(--spacing-lg);
+        }
+
+        .nav {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 48px;
+            margin: var(--spacing-md);
+            padding: var(--spacing-md);
+        }
+
+        .body-text {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .small-text {
+            font-size: 0.75rem;
+            color: var(--color-neutral);
+            /*color: color-mix(in srgb, var(--color-text-dark) 70%, transparent);*/
+        }
+
+        /* Color Palette Section */
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .color-swatch {
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Component Styles */
+        .button {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: background-color 0.3s ease, transform 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .button:hover {
+            /*background-color: color-mix(in srgb, var(--color-primary) 80%, black);*/
+            background-color: #241F77;
+            border-color: var(--color-secondary);
+            transform: scale(1.05);
+        }
+
+        .form:hover {
+            border-color: var(--color-secondary);
+        }
+        .button:active {
+            transform: scale(0.95);
+            background-color: var(--color-secondary);
+        }
+
+        .button:focus-visible, .link:focus-visible, .input:focus-visible {
+            outline: 3px solid var(--color-highlight);
+        }
+
+
+        .link {
+            color: var(--color-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration-color 0.3s;
+        }
+
+        .link:hover {
+            color: var(--color-accent);
+            text-decoration: underline;
+            text-decoration-color: var(--color-highlight);
+        }
+
+        .link:visited {
+            color: var(--color-neutral);
+        }
+
+        /* Spacing Demonstration */
+        .spacing-demo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .spacing-block {
+            background-color: var(--color-primary);
+            height: 50px;
+        }
+
+        .form {
+            width: min(400px, 100%);
+            padding: var(--spacing-sm) var(--spacing-md);
+            margin-top: var(--spacing-xs);
+            border-radius: var(--radius-sm);
+            border: 3px solid var(--color-neutral);
+            background: #FFFAF8;
+            color: var(--color-neutral);
+            font-family: var(--font-primary);
+        }
+
+        a {
+            color: var(--color-secondary);
+        }
+        
+        a:visited {
+            color: var(--color-secondary);
+        }
+
+        a:hover {
+            color: var(--color-accent);
+        }
+
+        a:active {
+            color: var(--color-highlight);
+        }
