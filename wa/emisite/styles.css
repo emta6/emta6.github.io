@@ -46,13 +46,19 @@
             padding: var(--spacing-xl);
         }
 
+
         .container {
             max-width: 1800px;
             margin: var(--spacing-lg);
             padding: var(--spacing-xl);
+            display: block;
             background-color: var(--color-background-container);
             border-radius: var(--radius-md);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-container :hover {
+            background-color: #fedbc1;
         }
 
         /* Typography Styles */
@@ -108,9 +114,25 @@
             padding: var(--spacing-md);
         }
 
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 18px;
+        }
+
+        .grid-container img {
+            width: 70%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            display: block;
+            border-radius: var(--radius-md);
+        }
+    
+
         .body-text {
             font-size: 1rem;
             margin-bottom: var(--spacing-md);
+            padding: var(--spacing-sm);
         }
 
         .small-text {
