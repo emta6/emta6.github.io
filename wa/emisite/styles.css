@@ -277,15 +277,19 @@
             padding: 0;
     }
 
-    .work-block {
-        margin-top: var(--spacing-xl);
-    }
+   .work-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
 
     .work-block img {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-        display: block;
-        margin: var(--spacing-md);
-    }
+    width: 100%;
+    max-width: 100px;
+    aspect-ratio: 4/3;
+    height: auto;
+    display: block;
 }
+
+        }
