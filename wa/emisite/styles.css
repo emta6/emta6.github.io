@@ -6,6 +6,8 @@
             --color-accent: #AE0A18;      /* Passionate Red - Highlight / Warning Color */
             --color-neutral: #1E3048;     /* Deep Slate Gray - Neutral Text and Background */
             --color-highlight: #FFAF75;   /* Bright Yellow - Accent / Attention Color */
+            --color-border: #c1bfff80;
+            --color-overlay: #c1bfff80;
             
             /* Derived Colors for Flexibility */
             --color-background: #FFFAF8;
@@ -15,8 +17,8 @@
             --color-text-light: white;
 
             /* Typography */
-            --font-primary: 'Switzer', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-secondary: 'Switzer', monospace;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-secondary: 'Inter', sans-serif;
 
             /* Spacing System */
             --spacing-xs: 0.25rem;
@@ -31,6 +33,11 @@
             --radius-lg: 12px;
         }
 
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -42,8 +49,12 @@
             line-height: 1.6;
             background-color: var(--color-background);
             color: var(--color-neutral);
-            margin: var(--spacing-lg);
-            padding: var(--spacing-xl);
+            border-top: 0.5px solid var(--color-neutral);
+            border-bottom: 0.5px solid var(--color-neutral);
+        }
+
+        img {
+            border-radius: var(--spacing-xs);
         }
 
 
@@ -52,8 +63,7 @@
         /* Typography Styles */
         h1 {
             font-size: 2.2rem;
-            font-weight: 900;
-            margin-bottom: var(--spacing-md);
+            font-weight: 700;
             color: var(--color-primary);
         }
 
@@ -78,22 +88,18 @@
             color: var(--color-primary);
         }
 
-         .container {
+        .container {
             max-width: 1800px;
-            margin: var(--spacing-lg);
-            padding: var(--spacing-xl);
-            display: block;
-            background-color: var(--color-background-container);
-            border-radius: var(--radius-md);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            padding: var(--spacing-lg);
         }
 
         .container-card {
             max-width: 800px;
-            padding: var(--spacing-md);
+            padding: var(--spacing-sm);
             border-radius: var(--radius-md);
-            background-color: var(--color-background-container);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            /*background-color: var(--color-background-container);*/
+            /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);*/
 
         }
 
@@ -107,9 +113,51 @@
         }
 
         .header-nav {
+            position: sticky;
+            top: 0;
             display: flex;
+            z-index: 1;
             justify-content: space-between;
             align-items: center;
+            padding: var(--spacing-md);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-nav h1{
+            margin: var(--spacing-lg);
+        }
+
+        .header-nav .nav-links {
+            margin: var(--spacing-lg);
+        }
+        .hero {
+            padding-top: var(--spacing-xl);
+            padding-bottom: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1200px;
+        }
+
+        .outer-hero {
+            border-top: 0.5px solid var(--color-border);
+            border-bottom: 0.5px solid var(--color-border);
+            background-image:
+            linear-gradient(to bottom, rgba(193,191,255,0.14), transparent 20%),
+            linear-gradient(to top, rgba(193,191,255,0.14), transparent 20%);
+        }
+
+
+        .footer-style {
+            top: 0;
+            display: flex;
+            z-index: 1;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: var(--spacing-lg);
+            margin-right: var(--spacing-lg);
+            padding: var(--spacing-md);
+            border-top: var(--color-border);
         }
 
         .nav-links {
@@ -123,21 +171,35 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: auto auto;
-            gap: 18px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
         }
 
         .grid-container img {
             width: 100%;
             height: auto;
-            aspect-ratio: 3/4;
+            aspect-ratio: 4/4;
             object-fit: cover;
             display: block;
-            border-radius: var(--radius-md);
+            border-radius: var(--radius-sm);
+        }
+
+        .grid-container a {
+            display: inline-block;
+            color: var(--color-secondary);
+            text-decoration-color: transparent;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+            transition: color 0.2s ease, transform 0.15s ease, text-decoration-color 0.2s ease;
+        }
+
+        .grid-container a:hover {
+            color: var(--color-highlight);
         }
 
          .grid-container section:hover {
-            background-color: #fedbc1;
+            overlay: var(--color-overlay);
+            /*background-color: #fedbc1;*/
         }
 
         .body-text {
@@ -242,21 +304,35 @@
             font-family: var(--font-primary);
         }
 
-        a {
+        .nav-links a {
+            display: inline-block;
             color: var(--color-secondary);
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+            transition: color 0.2s ease, transform 0.15s ease, text-decoration-color 0.2s ease;
         }
-        
-        a:visited {
+
+        .nav-links a:visited {
             color: var(--color-secondary);
         }
 
-        a:hover {
-            color: var(--color-accent);
-        }
-
-        a:active {
+        .nav-links a:hover {
             color: var(--color-highlight);
+            text-decoration-color: var(--color-highlight);
+            transform: translateY(-1px);
         }
+
+        .nav-links a:active {
+            color: var(--color-highlight);
+            transform: translateY(0);
+        }
+
+        .nav-links a[aria-current="page"] {
+            text-decoration-color: var(--color-secondary);
+        }
+
 
         @media (max-width: 750px) {
             .grid-container {
