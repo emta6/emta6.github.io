@@ -443,7 +443,7 @@
         }
 
         .grid-container a:hover {
-            color: var(--color-highlight);
+            color: var(--color-accent);
         }
 
          .grid-container section:hover {
@@ -526,7 +526,7 @@
         .link:hover {
             color: var(--color-accent);
             text-decoration: underline;
-            text-decoration-color: var(--color-highlight);
+            text-decoration-color: var(--color-accent);
         }
 
         .link:visited {
@@ -570,7 +570,7 @@
 
         .contact-link-link a:hover{
             text-decoration: none;
-        color: var(--color-highlight);
+        color: var(--color-accent);
         }
 
         .contact-link-link-link svg {
@@ -592,7 +592,7 @@
         }
 
         .contact-link-link-link a:hover {
-            color: var(--color-highlight);
+            color: var(--color-accent);
             text-decoration: underline;
         }
 
@@ -622,8 +622,8 @@
         }
 
         .nav-links a:hover {
-            color: var(--color-highlight);
-            text-decoration-color: var(--color-highlight);
+            color: var(--color-accent);
+            text-decoration-color: var(--color-accent);
             transform: translateY(-1px);
         }
 
