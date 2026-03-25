@@ -142,6 +142,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 
   padding: 20px 24px;
   backdrop-filter: blur(10px);
@@ -151,6 +152,8 @@ p {
   );
 
 }
+
+
 
 
 .site-title {
@@ -195,11 +198,11 @@ p {
 
 /* Homepage hero */
 
-.outer-hero {
+/*.outer-hero {
   background-image:
     linear-gradient(to bottom, rgba(193, 191, 255, 0.14), transparent 20%),
     linear-gradient(to top, rgba(193, 191, 255, 0.14), transparent 20%);
-}
+}*/
 
 .hero {
   padding-top: var(--spacing-xl);
@@ -224,6 +227,70 @@ p {
   padding: var(--spacing-sm);
   border-radius: 0;
 }
+
+/* card overlay styling */
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+
+  transition: opacity 0.25s ease, background 0.25s ease;
+}
+
+.card-overlay p {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.card-overlay h1 {
+    color: var(--color-secondary);
+}
+
+.card-image-wrapper:hover .card-overlay {
+  opacity: 1;
+  background: rgba(55, 55, 55, 0.6);
+  backdrop-filter: blur(6px);
+background-color: rgba(255, 255, 255, 0.6);
+}
+
+.card-image-wrapper:hover .card-overlay p {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*grid container stuff*/
+
 
 .grid-container img {
   width: 100%;
@@ -250,11 +317,45 @@ p {
   color: var(--color-accent);
 }
 
+/* Project Details At a glance card */
+
+.project-placard {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  padding-top: 20px;
+  padding-bottom: 28px;
+  border-top: 1px solid var(--color-border);
+}
+
+.placard-item {
+  min-width: 0;
+}
+
+.placard-label {
+  margin-bottom: 6px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+    color: var(--color-secondary);
+}
+
+.placard-value {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-neutral);
+}
+
 /* Shared title band / project intro */
 
 .outer-title-style,
 .outer-title-band {
-  background-image: linear-gradient(to bottom, rgba(193, 191, 255, 0.1), transparent 20%);
+border-top: solid, 1px, var(--color-border-less-subtle);
+  background-image: linear-gradient(to bottom, rgba(193, 191, 255, 0.04), transparent 30%);
+}
+
+.outer-title-style h1{
+    font-size: 3.2rem;
 }
 
 .title-content,
@@ -280,6 +381,28 @@ p {
   padding-top: 56px;
   padding-bottom: 56px;
 }
+
+
+
+.project-hero.reverse,
+.project-process.reverse {
+    display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.7fr);
+  gap: 48px;
+  align-items: start;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+/*.project-hero.reverse .project-hero-image,
+.project-process.reverse .project-process-images {
+  order: 2;
+}
+
+.project-hero.reverse .project-hero-text,
+.project-process.reverse .process-text {
+  order: 1;
+}*/
 
 .project-hero-text,
 .process-text {
@@ -322,6 +445,39 @@ border: 1px solid rgba(0,0,0,0.06);
   padding-bottom: 72px;
   margin-bottom: 0;
   max-width: 720px;
+}
+
+/* Stack section for one offs (context section, videos, etc) */
+.stacked-section {
+  border-top: 1px solid var(--color-border);
+  padding-top: 24px;
+  margin-top: 56px;
+
+}
+
+.stacked-section h2 {
+  margin-bottom: 16px;
+  font-size: 2.5rem;
+}
+
+.stacked-media {
+  width: 100%;
+  margin-top: 42px;
+}
+
+.stacked-media img,
+.stacked-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.stacked-caption {
+  margin-top: 12px;
+  max-width: 1200px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.65);
 }
 
 /* Bio page */
@@ -494,6 +650,7 @@ border: 1px solid rgba(0,0,0,0.06);
   .project-hero,
   .project-process {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .project-hero-text,
