@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When No One Is Looking</title>
+  <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+
+</head>
+<body>
+
+  <!-- =========================================================
+    SECTION 1: INTRO SCREEN
+    PURPOSE:
+    - Sets the tone
+    - Gives brief project description
+    - Lets the user intentionally "enter" the research experience
+  ========================================================== -->
+  <section class="intro-screen" id="top">
+    <div class="page-shell intro-layout">
+      <p class="eyebrow">Research Exemplar</p>
+      <h1 class="intro-title">When No One Is Looking</h1>
+      <p class="intro-text">
+        A guided experience through interview excerpts, saved content,
+        and designed objects generated from digital behavior on social media.
+      </p>
+
+      <a href="#intro" class="enter-link">Enter</a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+    SECTION 2: STICKY NAVIGATION
+    PURPOSE:
+    - Allows users to jump around if they want
+    - Active link highlights based on scroll position
+    - Supports the guided experience without overpowering it
+  ========================================================== -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="#top" class="site-title">When No One Is Looking</a>
+
+      <nav class="site-nav" aria-label="Research sections">
+        <a href="#intro">Intro</a>
+        <a href="#voice">Voice</a>
+        <a href="#artifacts">Artifacts</a>
+        <a href="#form">Form</a>
+        <a href="#method">Method</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =========================================================
+      SECTION 3: INTRO TO THE RESEARCH STORY
+      PURPOSE:
+      - Begins the actual narrative after the Enter moment
+      - Gives context for what the viewer is about to experience
+    ========================================================== -->
+    <section id="intro" class="section first-story-section">
+      <div class="page-shell section-grid">
+        <div class="section-label">
+          <p class="eyebrow">Intro</p>
+        </div>
+
+        <div class="section-body narrow stack">
+          <h2 class="section-heading">A study of what we hide and what we reveal.</h2>
+          <p>
+            This project explores the tension between public self-presentation
+            and private digital behavior. Through interviews, saved content,
+            and formal translation, each participant’s relationship to visibility
+            is expressed as a layered lamp.
+          </p>
+          <p>
+            This website moves through
+            each participant’s words, artifacts, and patterns before arriving at
+            the physical object generated from their data.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      SECTION 4: PARTICIPANT OPENING
+      PURPOSE:
+      - Introduces the participant / case study chapter
+      - Signals that the viewer is now entering an individual story
+    ========================================================== -->
+    <section class="section participant-marker">
+      <div class="page-shell">
+        <p class="eyebrow">Participant 01</p>
+        <h2 class="participant-title">Jane Doe</h2>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      SECTION 5: FEATURE QUOTE
+      PURPOSE:
+      - Emotional entry point
+      - Lets the participant's voice lead before analysis begins
+    ========================================================== -->
+    <section id="voice" class="section quote-section">
+      <div class="page-shell">
+        <blockquote class="feature-quote">
+          “Interacting with those sorts of posts or saving stuff I resonate with is a way for me to recognize the reality of who I am and realize my insecurities” 
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      SECTION 6: INTERVIEW FRAGMENTS
+      PURPOSE:
+      - Expands on the participant's voice
+      - Builds nuance and shows how they described their behavior
+    ========================================================== -->
+    <section class="section">
+      <div class="page-shell section-grid">
+        <div class="section-label">
+          <p class="eyebrow">Voice</p>
+        </div>
+
+        <div class="section-body stack">
+          <p class="quote-fragment">
+            “If it was only my friends, I probably wouldn’t care. But family is different.”
+          </p>
+          <p class="quote-fragment">
+            “Some of the things I save feel more honest than what I would ever post.”
+          </p>
+          <p class="quote-fragment">
+            “There’s a difference between what I publicly perform and what I privately hold onto.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      SECTION 7: CONTENT ARTIFACTS
+      PURPOSE:
+      - Shows the actual saved / liked / relevant content
+      - Gives visual evidence for the behavioral reading
+    ========================================================== -->
+    <section id="artifacts" class="section">
+      <div class="page-shell section-grid">
+        <div class="section-label">
+          <p class="eyebrow">Artifacts</p>
+        </div>
+
+        <div class="section-body stack">
+          <p class="section-note">
+            Selected examples of content the participant saved or resonated with.
+          </p>
+
+          <div class="artifact-grid">
+            <figure class="artifact-card">
+              <img src="images/content-1.jpg" alt="Example of saved content 1" />
+              <figcaption>Content artifact 01</figcaption>
+            </figure>
+
+            <figure class="artifact-card">
+              <img src="images/content-2.jpg" alt="Example saved content 2" />
+              <figcaption>Content artifact 02</figcaption>
+            </figure>
+
+            <figure class="artifact-card">
+              <img src="images/content-3.jpg" alt="Example saved content 3" />
+              <figcaption>Content artifact 03</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      SECTION 8: INTERPRETATION
+      PURPOSE:
+      - Connects the quotes + content to your design reading
+      - Explains what pattern or tension you identified
+    ========================================================== -->
+    <section class="section">
+      <div class="page-shell section-grid">
+        <div class="section-label">
+          <p class="eyebrow">Reading</p>
+        </div>
+
+        <div class="section-body narrow stack">
+          <p>
+            Jane Doe's interview suggested a distinction between what is socially
+            acceptable to show and what feels privately meaningful. Saved content
+            functioned as a quieter archive of identity: less performative,
+            more intimate.
+          </p>
+          <p>
+            This tension informed the lamp’s structure. The relationship between
+            the inner and outer shell reflects the degree of separation between
+            public presentation and private authenticity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      SECTION 9: FORM / LAMP REVEAL
+      PURPOSE:
+      - Reveals the final physical outcome after the evidence
+      - Lets the viewer understand the object as a translation, not just an image
+    ========================================================== -->
+    <section id="form" class="section lamp-section">
+      <div class="page-shell">
+        <p class="eyebrow">Form</p>
+
+        <div class="lamp-layout">
+          <div class="lamp-image-wrap">
+            <img
+              src="images/lamp-render.jpg"
+              alt="Lamp generated from participant data"
+              class="lamp-image"
+            />
+          </div>
+
+          <div class="lamp-caption stack">
+            <h3>Generated Lamp</h3>
+            <p>
+              The degree of contact between the inner and outer surfaces at the
+              top edge represents reveal ratio. Greater connection suggests
+              stronger alignment between private identity and outward expression.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      SECTION 10: METHOD
+      PURPOSE:
+      - Gives structure and credibility
+      - Explains how the project moved from interview/content/data to form
+    ========================================================== -->
+    <section id="method" class="section">
+      <div class="page-shell section-grid">
+        <div class="section-label">
+          <p class="eyebrow">Method</p>
+        </div>
+
+        <div class="section-body narrow stack">
+          <p>
+            Interview excerpts, social media content, and quantitative patterns
+            were used as the basis for form generation.
+          </p>
+          <p>
+            Rather than directly visualizing statistics, the project translates
+            behavioral tension into a spatial relationship between an inner and
+            outer shell.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="cursor"></div>
+</body>
+</html>

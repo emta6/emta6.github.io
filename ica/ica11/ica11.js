@@ -62,3 +62,4 @@ function generateStory() {
   story.textContent = newStory;
   story.style.visibility = "visible";
 }
+
