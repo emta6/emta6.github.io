@@ -99,8 +99,8 @@ figure {
 .intro-screen {
   min-height: 100vh;
   display: grid;
-  align-items: end;
-  padding: var(--space-8) 0 var(--space-7);
+  align-items: center; /* changed from end */
+  padding: var(--space-6) 0;
 }
 
 .intro-layout {
