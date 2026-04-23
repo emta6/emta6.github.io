@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gaze</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <header class="site-header">
+    <span class="site-title">Emi Takaoka | Capstone 2026</span>
+    <nav class="site-nav">
+      <a href="#" id="nav-restart">Introduction</a>
+      <a href="#" id="nav-participants">Participants</a>
+    </nav>
+  </header>
+
+  <!-- SLIDES CONTAINER -->
+  <section class="slides-container" id="slides-container">
+
+    <!-- SLIDE 0 — Hero -->
+    <div class="slide active hero-slide" id="slide-0">
+      <div class="slide-content">
+        <div class="slide-text hero-text">
+          <h1 class="intro-title hero-title">Each lamp was shaped by someone's Instagram data.</h1>
+          <button class="learn-more-btn hero-btn" id="learn-more">
+            <span>Get to know the participants</span>
+            <span class="hero-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 4V16" stroke="currentColor" stroke-width="3.5" stroke-linecap="square"/>
+                <path d="M6 13L12 19L18 13" stroke="currentColor" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="slide-diagram">
+          <span class="slide-diagram-label">Diagram</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 1 -->
+    <div class="slide" id="slide-1">
+      <div class="slide-content">
+        <div class="slide-text">
+          <h2 class="intro-title">When you use Instagram, most of your activity is visible to everyone.</h2>
+        </div>
+        <div class="slide-diagram"><span class="slide-diagram-label">Diagram</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide" id="slide-2">
+      <div class="slide-content">
+        <div class="slide-text">
+          <h2 class="intro-title">So people are careful about the content they engage with. They curate, they filter, they perform.</h2>
+        </div>
+        <div class="slide-diagram"><span class="slide-diagram-label">Diagram</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide" id="slide-3">
+      <div class="slide-content">
+        <div class="slide-text">
+          <h2 class="intro-title">But Instagram also has a private feature: saving. When you save a post, nobody sees it but you.</h2>
+        </div>
+        <div class="slide-diagram"><span class="slide-diagram-label">Diagram</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide" id="slide-4">
+      <div class="slide-content">
+        <div class="slide-text">
+          <h2 class="intro-title">This creates a gap between what people show publicly and what they keep to themselves.</h2>
+        </div>
+        <div class="slide-diagram"><span class="slide-diagram-label">Diagram</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 -->
+    <div class="slide" id="slide-5">
+      <div class="slide-content">
+        <div class="slide-text">
+          <h2 class="intro-title">I collected that data from five people. Their likes, their saves, and the overlap between them.</h2>
+        </div>
+        <div class="slide-diagram"><span class="slide-diagram-label">Diagram</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6 -->
+    <div class="slide" id="slide-6">
+      <div class="slide-content">
+        <div class="slide-text">
+          <h2 class="intro-title">I asked them to show me the content they save when no one is watching.</h2>
+        </div>
+        <div class="slide-diagram"><span class="slide-diagram-label">Diagram</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7 -->
+    <div class="slide" id="slide-7">
+      <div class="slide-content">
+        <div class="slide-text">
+          <h2 class="intro-title">Their data became these lamps.</h2>
+        </div>
+        <div class="slide-diagram"><span class="slide-diagram-label">Diagram</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8 -->
+    <div class="slide" id="slide-8">
+      <div class="slide-content">
+        <div class="slide-text">
+          <h2 class="intro-title">Each one encodes the difference between a person's public and private behavior.</h2>
+        </div>
+        <div class="slide-diagram"><span class="slide-diagram-label">Diagram</span></div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9 — Final -->
+    <div class="slide" id="slide-9">
+      <div class="slide-content">
+        <div class="slide-text">
+          <h2 class="intro-title">Five people. Five interviews. Five lamps. What can we learn when this data becomes visible?</h2>
+        </div>
+        <div class="slide-diagram"><span class="slide-diagram-label">Diagram</span></div>
+      </div>
+      <button class="down-arrow" id="enter">↓</button>
+    </div>
+
+  </section>
+
+  <!-- BOTTOM BAR -->
+  <div class="bottom-bar hidden" id="bottom-bar">
+    <span class="slide-counter" id="counter">01 / 09</span>
+    <button class="next-btn" id="skip">Skip ↓</button>
+  </div>
+
+  <!-- STUDY SECTION -->
+  <div id="participants" class="study-section hidden">
+
+    <section class="study-intro">
+      <p class="eyebrow">The Study</p>
+      <h2 class="study-heading">On Instagram, likes are public and saves are private.
+I interviewed five participants to understand how that affects what they choose to engage with.</h2>
+      <p class="study-body">Each interview became a unique lighting object. The height, the pattern, the layers — all generated from their data.</p>
+    </section>
+
+    <!-- PARTICIPANT A -->
+    <section class="participant-section" data-participant="A">
+      <div class="participant-header">
+        <p class="participant-label">Participant A</p>
+        <div class="stat-bar">
+          <div class="stat">
+            <span class="stat-label">Age</span>
+            <span class="stat-value">21</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Pronouns</span>
+            <span class="stat-value">He / Him</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Total Likes</span>
+            <span class="stat-value">11,434</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Total Saves</span>
+            <span class="stat-value">1,831</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Overlap between both</span>
+            <span class="stat-value">57.1%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="participant-body-wrap">
+
+        <div class="interview-section">
+          <p class="eyebrow">Interview Highlights</p>
+
+          <div class="interview-block">
+            <p class="interview-question">How would you describe the version of yourself you present on Instagram?</p>
+            <blockquote class="feature-quote">"There are like a couple of versions of myself… and I think that they are dependent on the time of day. During the day I interact with cool things that are related to my profession. At night… the content becomes really emotional and vulnerable and like deep seated in my insecurity."</blockquote>
+          </div>
+
+          <div class="interview-block">
+            <p class="interview-question">Is there content you save that you wouldn’t engage with publicly? If so, why?</p>
+            <blockquote class="feature-quote">"When other people are around, I’m not so vulnerable. When I do see things like that resonate, because it’s just me, I feel comfortable enough to be vulnerable to save it. In that process, my saved posts are a space to be really honest with myself."</blockquote>
+
+            <div class="artifact-grid">
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (49)/IMG_6417.PNG" alt="">
+              </figure>
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (49)/IMG_6418.PNG" alt="">
+              </figure>
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (49)/IMG_6420.jpg" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="lamp-section">
+          <p class="eyebrow">The Object</p>
+          <div class="lamp-layout">
+            <div class="lamp-image-wrap">
+              <img class="lamp-image" src="assets/lamp-a.jpg" alt="">
+            </div>
+            <div class="lamp-stats">
+              <p class="participant-meta">Height — 200mm</p>
+              <p class="participant-meta">Layers — 4</p>
+              <p class="participant-meta">Reveal ratio — 6%</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+     <!-- PARTICIPANT E -->
+    <section class="participant-section" data-participant="E">
+      <div class="participant-header">
+        <p class="participant-label">Participant B</p>
+        <div class="stat-bar">
+          <div class="stat">
+            <span class="stat-label">Age</span>
+            <span class="stat-value">21</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Pronouns</span>
+            <span class="stat-value">She / Her</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Total Likes</span>
+            <span class="stat-value">5,319</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Total Saves</span>
+            <span class="stat-value">1,240</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Overlap Between Both</span>
+            <span class="stat-value">73.5%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="participant-body-wrap">
+
+        <div class="interview-section">
+          <p class="eyebrow">Interview Highlights</p>
+
+          <div class="interview-block">
+            <p class="interview-question">How do you think you are perceived online?</p>
+            <blockquote class="feature-quote">"I'd describe myself as artsy. My instagram is kind of like a scrapbook of things and people I like, instead of look-at-me posts. I'm more of an observer or consumer on Instagram."</blockquote>
+          </div>
+
+          <div class="interview-block">
+            <p class="interview-question">What content do you privately save but would hesitate to engage with publicly?</p>
+            <blockquote class="feature-quote">“I feel like stuff about, like, relationships or, like, poetry. Stuff that’s a little cringe. And posts about manifesting and spirituality.</blockquote>
+            <p class="interview-question">Can you provide three examples of content you don't engage with publicly?</p>
+            <div class="artifact-grid">
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (52)/IMG_6421.PNG" alt="">
+              </figure>
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (52)/IMG_6423.PNG" alt="">
+              </figure>
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (52)/IMG_6424.PNG" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="lamp-section">
+          <p class="eyebrow">The Object</p>
+          <div class="lamp-layout">
+            <div class="lamp-image-wrap">
+              <img class="lamp-image" src="assets/lamp-e.jpg" alt="">
+            </div>
+            <div class="lamp-stats">
+              <p class="participant-meta">Height — placeholder</p>
+              <p class="participant-meta">Layers — placeholder</p>
+              <p class="participant-meta">Reveal ratio — placeholder</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PARTICIPANT C -->
+    <section class="participant-section" data-participant="C">
+      <div class="participant-header">
+        <p class="participant-label">Participant C</p>
+        <div class="stat-bar">
+          <div class="stat">
+            <span class="stat-label">Age</span>
+            <span class="stat-value">24</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Pronouns</span>
+            <span class="stat-value">He / Him</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Total Likes</span>
+            <span class="stat-value">2,324</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Total Saves</span>
+            <span class="stat-value">374</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Overlap Between Both</span>
+            <span class="stat-value">12.8%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="participant-body-wrap">
+
+        <div class="interview-section">
+          <p class="eyebrow">Interview Highlights</p>
+
+          <div class="interview-block">
+            <p class="interview-question">How do you think you are perceived online?</p>
+            <blockquote class="feature-quote">"I try ot present myself in the coolest way I can. I try my best to avoid being dramatic, even though I very much am in real life."</blockquote>
+          </div>
+
+          <div class="interview-block">
+            <p class="interview-question">What content do you privately save but would hesitate to engage with publicly?</p>
+            <blockquote class="feature-quote">"I mostly save useful content, it's very rational for me. However I am careful when it comes to memes. There are memes that I think are funny but they are very political and controversial, so I always keep them to myself."</blockquote>
+            <p class="interview-question">Can you provide three examples of content you don't engage with publicly?</p>
+            <div class="artifact-grid">
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (53)/IMG_6400.jpg" alt="">
+              </figure>
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (53)/IMG_6401.jpg" alt="">
+              </figure>
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (53)/IMG_6402.jpg" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="lamp-section">
+          <p class="eyebrow">The Object</p>
+          <div class="lamp-layout">
+            <div class="lamp-image-wrap">
+              <img class="lamp-image" src="assets/lamp-c.jpg" alt="">
+            </div>
+            <div class="lamp-stats">
+              <p class="participant-meta">Height — placeholder</p>
+              <p class="participant-meta">Layers — placeholder</p>
+              <p class="participant-meta">Reveal ratio — placeholder</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PARTICIPANT B -->
+    <section class="participant-section" data-participant="B">
+      <div class="participant-header">
+        <p class="participant-label">Participant D</p>
+        <div class="stat-bar">
+          <div class="stat">
+            <span class="stat-label">Age</span>
+            <span class="stat-value">21</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Pronouns</span>
+            <span class="stat-value">She / Her</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Total Likes</span>
+            <span class="stat-value">5,874</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Total Saves</span>
+            <span class="stat-value">952</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Overlap Between Both</span>
+            <span class="stat-value">30.4%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="participant-body-wrap">
+
+        <div class="interview-section">
+          <p class="eyebrow">Interview Highlights</p>
+
+          <div class="interview-block">
+            <p class="interview-question">How do you think you are perceived online?</p>
+            <blockquote class="feature-quote">"I think I definitely seem like, happier and more confident. I probably to other people seem like the happiest person ever. But that is just so far from how I actually am."</blockquote>
+          </div>
+
+          <div class="interview-block">
+            <p class="interview-question">What content do you privately save but would hesitate to engage with publicly?</p>
+            <blockquote class="feature-quote">"There’s a lot of like ED type of content… like what I eat in a day or like how to be healthier… sometimes I’ll save, but I won’t interact with publicly because I don’t want people to know that’s something that I constantly think about."</blockquote>
+            <p class="interview-question">Can you provide three examples of content you don't engage with publicly?</p>
+            <div class="artifact-grid">
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (51)/IMG_6415.PNG" alt="">
+              </figure>
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (51)/IMG_6409.jpg" alt="">
+              </figure>
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (51)/IMG_6416.PNG" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="lamp-section">
+          <p class="eyebrow">The Object</p>
+          <div class="lamp-layout">
+            <div class="lamp-image-wrap">
+              <img class="lamp-image" src="assets/lamp-b.jpg" alt="">
+            </div>
+            <div class="lamp-stats">
+              <p class="participant-meta">Height — placeholder</p>
+              <p class="participant-meta">Layers — placeholder</p>
+              <p class="participant-meta">Reveal ratio — placeholder</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <!-- PARTICIPANT D -->
+    <section class="participant-section" data-participant="D">
+      <div class="participant-header">
+        <p class="participant-label">Participant D</p>
+        <div class="stat-bar">
+          <div class="stat">
+            <span class="stat-label">Age</span>
+            <span class="stat-value">21</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Pronouns</span>
+            <span class="stat-value">She/her</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Total Likes</span>
+            <span class="stat-value">1627</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Total Saves</span>
+            <span class="stat-value">413</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-label">Overlap Between Both</span>
+            <span class="stat-value">65.7%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="participant-body-wrap">
+
+        <div class="interview-section">
+          <p class="eyebrow">Interview Highlights</p>
+
+          <div class="interview-block">
+            <p class="interview-question">How do you think you are perceived online?</p>
+            <blockquote class="feature-quote">"I joined Instagram really late once my brain was developed, so I really just try to be authentic to me. I try to avoid curating some sort of aesthetic, like it makes me anxious."</blockquote>
+          </div>
+  
+          <div class="interview-block">
+            <p class="interview-question">What content do you privately save but would hesitate to engage with publicly?</p>
+            <blockquote class="feature-quote">"To be honest, I'm neurodivergent, I mask so heavily in much of my real life. Instagram is a place where I try and let it all go and just repost and like stuff to show my friends that I think is funny, without having to worry as much about how people are perceiving me."</blockquote>
+            <p class="interview-question">Can you provide three examples of content you don't engage with publicly?</p>
+            <div class="artifact-grid">
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (54)/IMG_6425.jpg" alt="">
+              </figure>
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (54)/IMG_6426.jpg" alt="">
+              </figure>
+              <figure class="artifact-card">
+                <img src="assets/(No subject) (54)/IMG_6427.jpg" alt="">
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="lamp-section">
+          <p class="eyebrow">The Object</p>
+          <div class="lamp-layout">
+            <div class="lamp-image-wrap">
+              <img class="lamp-image" src="assets/lamp-d.jpg" alt="">
+            </div>
+            <div class="lamp-stats">
+              <p class="participant-meta">Height — placeholder</p>
+              <p class="participant-meta">Layers — placeholder</p>
+              <p class="participant-meta">Reveal ratio — placeholder</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+   
+
+    <!-- CONCLUSION -->
+    <section class="conclusion" id="question">
+      <p class="eyebrow">The Question</p>
+      <h2 class="study-heading">Can translating private digital behavior into physical form reveal anything true about who we are?</h2>
+      <p class="study-body">Five people showed me their private archives. They hesitated. Make of that what you will.</p>
+      <p class="participant-meta" style="margin-top: 4rem;">Emi Takaoka — Capstone 2026</p>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

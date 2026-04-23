@@ -60,6 +60,7 @@ class Ball {
     const dx = this.x - ball.x;
     const dy = this.y - ball.y;
     const distance = Math.sqrt(dx * dx + dy * dy);
+    
     if (distance < this.size + ball.size) {
     let tempX = this.velX;
     let tempY = this.velY;
