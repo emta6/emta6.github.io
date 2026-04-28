@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Volume Control</title>
+  <link rel="stylesheet" href="final.css">
+</head>
+<body>
+
+  <h1>Emi's Volume Slider Game</h1>
+
+  <section id="volumeDisplay">Volume: <span id="numberOfVolume">50</span></section>
+  <div id="volumeBarContainer">
+    <div id="volumeBar"></div>
+  </div>
+  <section id="fretBoard">
+    <div id="noteLine"></div>
+    <canvas id="guitarHeroCanvas" width="500" height="600"></canvas>
+  </section>
+  <section id="buttons">
+  <button class="guitarNoteButtons" id="keyA" style="background:#92067f;">A</button>
+  <button class="guitarNoteButtons" id="keyS" style="background:#855107;">S</button>
+  <button class="guitarNoteButtons" id="keyJ" style="background:#747407;">J</button>
+  <button class="guitarNoteButtons" id="keyK" style="background:#097a64;">K</button>
+  <button class="guitarNoteButtons" id="keyL" style="background:#142d5a;">L</button>
+</section>
+
+  <section id="status"></section>
+  <button id="startButton">START</button>
+<div id="submitVolumeButton" style="display:none;">YOU GOT A COMBO! PRESS SPACE BAR TO SUBMIT</div>
+
+
+  <audio id="music_for_guitar_hero" src="alexgrohl-electronic-stylish-rock-15045.mp3"></audio>
+  <script src="final.js"></script>
+
+</body>
+</html>
